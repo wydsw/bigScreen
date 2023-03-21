@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import './home.scss';
 import headerBg from '../images/header.png';
 import * as echarts from 'echarts';
@@ -13,21 +13,22 @@ export const Home = () => {
         fontSize: px(12),
         color: '#79839E'
       },
-      title: {show: false},
-      legend: {show: false},
+      title: { show: false },
+      legend: { show: false },
       xAxis: {
         data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
-        axisTick: {show: false},
+        axisTick: { show: false },
         axisLine: {
-          lineStyle: {color: '#083B70'}
+          lineStyle: { color: '#083B70' }
         },
         axisLabel: {
           fontSize: px(12),
+          //x轴换行的写法
           formatter(val) {
             if (val.length > 2) {
-              const array = val.split('');
-              array.splice(2, 0, '\n');
-              return array.join('');
+              const array = val.split('');//把val变成数组
+              array.splice(2, 0, '\n');//在第2个，删除0个，添加回车；
+              return array.join('');//将数组变成字符串
             } else {
               return val;
             }
@@ -41,10 +42,10 @@ export const Home = () => {
         y2: px(40),
       },
       yAxis: {
-        splitLine: {show: false},
+        splitLine: { show: false },
         axisLine: {
           show: true,
-          lineStyle: {color: '#083B70'}
+          lineStyle: { color: '#083B70' }
         },
         axisLabel: {
           fontSize: px(12)
@@ -58,7 +59,7 @@ export const Home = () => {
   }, []);
   return (
     <div className="home">
-      <header style={{backgroundImage: `url(${headerBg})`}}/>
+      <header style={{ backgroundImage: `url(${headerBg})` }} />
       <main>
         <section className="section1">
           <div className="bordered 管辖统计">
