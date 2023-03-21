@@ -1,0 +1,11 @@
+{
+    "git.enabled": true,
+    "git.path": "D:\\Software\\cmder\\vendor\\git-for-windows\\cmd\\git.exe",
+    "terminal.integrated.profiles.windows": {
+        "bash": {
+            "path": "D:\\Software\\cmder\\vendor\\git-for-windows\\bin\\bash.exe",
+            "args": []
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "bash",
+}
